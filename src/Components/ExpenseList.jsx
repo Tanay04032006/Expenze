@@ -19,7 +19,7 @@ const ExpenseList = ({ expenses, setExpenses }) => {
   };
 
   return (
-    <div>
+    <div className='flex flex-col items-center py-10'>
       <h2>Expense List</h2>
       {expenses.length === 0 ? (
         <p>No expenses added yet.</p>
