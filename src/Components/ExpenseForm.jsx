@@ -27,12 +27,14 @@ const ExpenseForm = ({ onAddExpense }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="flex flex-col items-center py-10">
-        <div>
-          <label htmlFor="description" className="px-4">Description</label>
+    <form onSubmit={handleSubmit} className="animate-fadeIn">
+      <div className="flex flex-col items-center py-10 max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h2 className="text-2xl font-semibold text-blue-600 mb-6">Add Expense</h2>
+
+        <div className="w-full mb-4">
+          <label htmlFor="description" className="block text-lg font-medium text-gray-700 mb-2">Description</label>
           <input
-            className="border-2 border-gray-300"
+            className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
             type="text"
             id="description"
             value={description}
@@ -41,10 +43,10 @@ const ExpenseForm = ({ onAddExpense }) => {
           />
         </div>
 
-        <div>
-          <label htmlFor="amount" className="px-4">Amount</label>
+        <div className="w-full mb-4">
+          <label htmlFor="amount" className="block text-lg font-medium text-gray-700 mb-2">Amount</label>
           <input
-            className="border-2 border-gray-300"
+            className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
             type="number"
             id="amount"
             value={amount}
@@ -53,10 +55,10 @@ const ExpenseForm = ({ onAddExpense }) => {
           />
         </div>
 
-        <div>
-          <label htmlFor="date" className="px-4">Date</label>
+        <div className="w-full mb-6">
+          <label htmlFor="date" className="block text-lg font-medium text-gray-700 mb-2">Date</label>
           <input
-            className="border-2 border-gray-300"
+            className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
             type="date"
             id="date"
             value={date}
@@ -66,16 +68,7 @@ const ExpenseForm = ({ onAddExpense }) => {
         </div>
 
         <button
-          className="
-            bg-blue-500
-            hover:bg-blue-700
-            text-white
-            font-bold
-            py-2
-            px-4
-            rounded
-            mt-4
-          "
+          className="w-full py-3 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
           type="submit"
         >
           Add Expense
